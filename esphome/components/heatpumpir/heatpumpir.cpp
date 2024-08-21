@@ -20,12 +20,15 @@ const std::map<Protocol, std::function<HeatpumpIR *()>> PROTOCOL_CONSTRUCTOR_MAP
     {PROTOCOL_DAIKIN_ARC417, []() { return new DaikinHeatpumpARC417IR(); }},                 // NOLINT
     {PROTOCOL_DAIKIN_ARC480, []() { return new DaikinHeatpumpARC480A14IR(); }},              // NOLINT
     {PROTOCOL_DAIKIN, []() { return new DaikinHeatpumpIR(); }},                              // NOLINT
+    {PROTOCOL_ELECTROLUXYAL, []() { return new ElectroluxYALHeatpumpIR(); }},                // NOLINT
     {PROTOCOL_FUEGO, []() { return new FuegoHeatpumpIR(); }},                                // NOLINT
     {PROTOCOL_FUJITSU_AWYZ, []() { return new FujitsuHeatpumpIR(); }},                       // NOLINT
     {PROTOCOL_GREE, []() { return new GreeGenericHeatpumpIR(); }},                           // NOLINT
     {PROTOCOL_GREEYAA, []() { return new GreeYAAHeatpumpIR(); }},                            // NOLINT
     {PROTOCOL_GREEYAN, []() { return new GreeYANHeatpumpIR(); }},                            // NOLINT
     {PROTOCOL_GREEYAC, []() { return new GreeYACHeatpumpIR(); }},                            // NOLINT
+    {PROTOCOL_GREEYT, []() { return new GreeYTHeatpumpIR(); }},                              // NOLINT
+    {PROTOCOL_GREEYAP, []() { return new GreeYAPHeatpumpIR(); }},                            // NOLINT
     {PROTOCOL_HISENSE_AUD, []() { return new HisenseHeatpumpIR(); }},                        // NOLINT
     {PROTOCOL_HITACHI, []() { return new HitachiHeatpumpIR(); }},                            // NOLINT
     {PROTOCOL_HYUNDAI, []() { return new HyundaiHeatpumpIR(); }},                            // NOLINT
@@ -52,6 +55,17 @@ const std::map<Protocol, std::function<HeatpumpIR *()>> PROTOCOL_CONSTRUCTOR_MAP
     {PROTOCOL_SHARP, []() { return new SharpHeatpumpIR(); }},                                // NOLINT
     {PROTOCOL_TOSHIBA_DAISEIKAI, []() { return new ToshibaDaiseikaiHeatpumpIR(); }},         // NOLINT
     {PROTOCOL_TOSHIBA, []() { return new ToshibaHeatpumpIR(); }},                            // NOLINT
+    {PROTOCOL_ZHLT01, []() { return new ZHLT01HeatpumpIR(); }},                              // NOLINT
+    {PROTOCOL_NIBE, []() { return new NibeHeatpumpIR(); }},                                  // NOLINT
+    {PROTOCOL_QLIMA_1, []() { return new Qlima1HeatpumpIR(); }},                             // NOLINT
+    {PROTOCOL_QLIMA_2, []() { return new Qlima2HeatpumpIR(); }},                             // NOLINT
+    {PROTOCOL_SAMSUNG_AQV12MSAN, []() { return new SamsungAQV12MSANHeatpumpIR(); }},         // NOLINT
+    {PROTOCOL_ZHJG01, []() { return new ZHJG01HeatpumpIR(); }},                              // NOLINT
+    {PROTOCOL_AIRWAY, []() { return new AIRWAYHeatpumpIR(); }},                              // NOLINT
+    {PROTOCOL_BGH_AUD, []() { return new BGHHeatpumpIR(); }},                                // NOLINT
+    {PROTOCOL_PANASONIC_ALTDKE, []() { return new PanasonicAltDKEHeatpumpIR(); }},           // NOLINT
+    {PROTOCOL_VAILLANTVAI8, []() { return new VaillantHeatpumpIR(); }},                      // NOLINT
+    {PROTOCOL_R51M, []() { return new R51MHeatpumpIR(); }},                                  // NOLINT
 };
 
 void HeatpumpIRClimate::setup() {
